@@ -188,7 +188,7 @@ streamlit run app.py
    - Check usage limits
 
 ### Debugging Tips
-```bash
+```
 # Check Redis connection
 redis-cli ping
 
@@ -197,5 +197,23 @@ python -c "import openai; openai.Model.list()"
 
 # View logs
 streamlit run app.py --logger.level=debug
+```
+## Demo Access
+
+Test the application with these pre-configured accounts:
+
+### Analyst Account
+```
+Username: analyst1
+Password: analystpass
+```
+
+### Investor Accounts
+```
+Username: investor1
+Password: investorpass
+
+Username: investor2
+Password: investorpass
 ```
 
