@@ -1,0 +1,11 @@
+streamlit
+yfinance
+pandas
+numpy
+plotly
+redis
+python-dotenv
+bcrypt
+ta-lib-binary
+openai
+python-dotenv
