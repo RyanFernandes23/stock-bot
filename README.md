@@ -199,16 +199,3 @@ python -c "import openai; openai.Model.list()"
 streamlit run app.py --logger.level=debug
 ```
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Contribution
-Contributions are welcome! Please follow these steps:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a pull request
-
----
-**Note**: This application is for educational purposes only. Not financial advice. Always conduct your own research before making investment decisions.
