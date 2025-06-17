@@ -44,10 +44,10 @@ The Stock Analyst Application is a comprehensive platform that empowers financia
 graph TD
     A[Streamlit UI] --> B[Redis Database]
     A --> C[Technical Analysis Engine]
-    A --> D[OpenAI API]
+    A --> D[Groq API]
     C --> E[Yahoo Finance API]
-    D --> F[GPT-4 Vision]
-    D --> G[GPT-3.5 Text]
+    D --> F[Groq-LLama3-chart_json]
+    D --> G[GPT-LLama3 text]
 ```
 
 ### Component Breakdown:
@@ -72,7 +72,7 @@ graph TD
 ```mermaid
 sequenceDiagram
     User->>Chatbot: Asks question about analysis
-    Chatbot->>OpenAI: Sends question + chart images
+    Chatbot->>OpenAI: Sends question + chart data
     OpenAI->>Chatbot: Returns analysis
     Chatbot->>User: Provides insights
 ```
@@ -105,9 +105,6 @@ cp secrets.example .env
 
 ### Database Initialization
 ```bash
-# Start Redis (Docker)
-docker run -d -p 6379:6379 --name stock-redis redis
-
 # Initialize database
 set INIT_DB=true
 streamlit run app.py
@@ -191,9 +188,6 @@ streamlit run app.py
 ```
 # Check Redis connection
 redis-cli ping
-
-# Test API keys
-python -c "import openai; openai.Model.list()"
 
 # View logs
 streamlit run app.py --logger.level=debug
