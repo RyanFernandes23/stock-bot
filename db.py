@@ -3,14 +3,23 @@ import json
 import uuid
 from datetime import datetime
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class RedisDB:
     def __init__(self):
         self.r = redis.Redis(
-            host='localhost',
-            port=6379,
-            decode_responses=True
-        )
+    host='redis-13702.c11.us-east-1-2.ec2.redns.redis-cloud.com',
+    port=13702,
+    decode_responses=True,
+    username="default",
+    password=os.getenv("REDIS_PASSWORD"),
+)
+
+
+
+
     
     def create_user(self, username, password, role, assigned_analyst=None):
         user_key = f"user:{username}"
